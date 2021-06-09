@@ -22,10 +22,14 @@ jobs:
           #latexmk_use_xelatex: true
           
       - name: Push to gh-pages
-        if: success() # && github.event_name == 'push'
-        uses: peaceiris/actions-gh-pages@v3
+        uses: canastro/copy-file-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
+          source: "main.pdf"
+          target: "shan.pdf"
+        #if: success() # && github.event_name == 'push'
+        #uses: peaceiris/actions-gh-pages@v3
+        #with:
+         # github_token: ${{ secrets.GITHUB_TOKEN }}
+          #publish_dir: ./output
           #user_name: 'github-actions[bot]'
           #user_email: 'github-actions[bot]@users.noreply.github.com'
