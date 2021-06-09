@@ -22,11 +22,10 @@ jobs:
           #latexmk_use_xelatex: true
           
       - name: Push to gh-pages
-        if: success() && github.event_name == 'push'
-        # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
-        uses: peaceiris/actions-gh-pages@8a36f3edfc5d1cbae6b09e6f5a7d7b19e5b7a73b
+        if: success()# && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          #user_name: 'github-actions[bot]'
+          #user_email: 'github-actions[bot]@users.noreply.github.com'
