@@ -15,17 +15,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install LaTeX
-        run: sudo apt-get install texlive texlive-xetex texlive-fonts-extra latexmk
-
       - name: Compile PDF
-        run: |
-          make
-          cd output
-          rm -f *.aux *.log *.bbl *.blg *.out *.toc
-          touch .nojekyll
-          cd ..
-
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: shantanu_dash_cv.tex
+          
       - name: Push to gh-pages
         if: success() && github.event_name == 'push'
         # Don't use tags: https://julienrenaux.fr/2019/12/20/github-actions-security-risk/
