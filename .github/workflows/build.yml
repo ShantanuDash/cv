@@ -22,13 +22,20 @@ jobs:
           #latexmk_use_xelatex: true
           
       - name: Push to gh-pages
-        uses: canastro/copy-file-action@master
+        uses: softprops/action-gh-release@v1
+        #if: startsWith(github.ref, 'refs/tags/')
         with:
-          source: "main.pdf"
-          target: "shan.pdf"
+          files: main.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ShantanuDash/cv
+        #uses: canastro/copy-file-action@master
+        #with:
+        #  source: "main.pdf"
+        #  target: "shan.pdf"
         #if: success() # && github.event_name == 'push'
         #uses: peaceiris/actions-gh-pages@v3
-        #with:
+       # with:
          # github_token: ${{ secrets.GITHUB_TOKEN }}
           #publish_dir: ./output
           #user_name: 'github-actions[bot]'
