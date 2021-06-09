@@ -19,6 +19,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: shantanu_dash_cv.tex
+          latexmk_use_xelatex: true
           
       - name: Push to gh-pages
         if: success() && github.event_name == 'push'
