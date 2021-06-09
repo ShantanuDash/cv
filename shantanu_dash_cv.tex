@@ -1,211 +1,231 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Original author:
-% Rahul Chauhan (http://rahulchauhan.net)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
 %
-% Original repository:
-% https://github.com/rahulworld/rahulworld-Resume
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[]{rahulworld-resume}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
 
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+\usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty} % Removes page numbering
 
-\begin{minipage}[t]{0.33\textwidth} 
-\begin{large}
-	\headername{Rahul Chuahan}\\
-\end{large}
-Final Year (B.Tech)\\
-Computer Science $\&$  Engineering\\ 
-at NIT Srinagar \\ 
-CGPA:8.039 till 7th Sem 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LINKS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Links} 
-\noindent\rule{5cm}{0.4pt}
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
 
-Github:// \href{https://github.com/rahulworld}{\custombold{rahulworld}} \\
-LinkedIn://  \href{https://www.linkedin.com/in/rahulworld}{\custombold{rahulworld}} \\
-Behance://  \href{https://www.behance.net/rahul_world}{\custombold{rahul\_world}} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Skills}
-\noindent\rule{5cm}{0.4pt}
-\subsection{OS}
-GNU/Linux, Windows
-\vspace{6pt}
-\subsection{Languages}
-C/C++, Java, Python, javascript
-\vspace{6pt}
-\subsection{Framework}
-Flask, ExtJS, \\Node.js, Android,
-Web-development
-\vspace{6pt}
-\subsection{Databases}
-MySQL, PostgreSQL, MangoDB
-\vspace{6pt}
-\subsection{Others}
-Markdown, Git, Vim, \\Sublime Text, Eclipse,\\
-Android Studio, Coral Draw,\\
-Adobe Illustrator, Photoshop
-\sectionsep
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Coursework}
-\noindent\rule{5cm}{0.4pt}
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
 
-Data Structures\\
-Algorithm\\
-Neural Networks\\
-Discrete Mathematics\\
-Operating Systems\\
-MySQL\\
-Data Analysis
-\sectionsep
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Education} 
-\noindent\rule{5cm}{0.4pt}\\
-\datecolor{20XX-20YY}
-\subsection{B.Tech. in CSE}
-NIT SRINAGAR \\
-CGPA : 8.05/10(Expected)\\
-\vspace{8pt}
-\datecolor{20XX-20YY}
-\subsection{Intermediate}
-Hame Convent Inter College, FZD\\
-Percentage: 80.8\%\\
-\vspace{8pt}
-\datecolor{20XX-20YY}
-\subsection{High School}
-Hame Convent Inter College, FZD\\
-Percentage: 81\%
-\sectionsep
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\par{\centering{\Huge John \textsc{Smith}}\bigskip\par} % Your name
 
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.66\textwidth} 
-% \descript{BS in Computer ence}
-\hspace*{0pt}\hfill    \\
-\hspace*{0pt}\hfill    \\
-\hspace*{0pt}\hfill J-90, NIT Srinagar, Hazaratbal \\
-\hspace*{0pt}\hfill Srinagar, J$\&$ K-190 006, India \\
-\hspace*{0pt}\hfill Mob.: +91-8449368522 \\
-\hspace*{0pt}\hfill Email.:\textbf{\href{mailto:rahulnitsxr@gmail.com}{rahulnitsxr@gmail.com}} \\
-\hspace*{0pt}\hfill Web.:\textbf{\href{http://rahulchauhan.net}{http://rahulchauhan.net}} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EXPERIENCE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Experience}
-\noindent\rule{12.5cm}{0.4pt}
-\datecolor{20XX-now} \runsubsection{OSGeo}
-\descript{Google Summer of Code 2018 Student Developer Intern }
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{2pt}}
-Support of Unit of Measure conversion in istSOS3: My project is to add conversion of
-unit of measure in istsos3. User can convert unit in another specified unit.
-\end{minipage}
-\descriptright{Python, PostgreSQL, Pandas, Numpy, Scipy, Pint, Postgresql-unit, Javascript}
-\sectionsep
+\section{Personal Data}
 
-\datecolor{20XX-now} \runsubsection{OSGeo}
-\descript{Google Summer of Code 2017 Student Developer Intern }
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{2pt}}
-Data analysis and statastical tool suit: istsos2 provides easily manage your sensor network
-and distribute your data in a standard way. which is be used to automate the creation of statisticate
-documents using OAT(Observation analysis tool) and harvesting the data from an istSOS server.
-\end{minipage}
-\descriptright{ExtJS, Dygraph.js, D3.js, Data analysis, Python, PostGIS, Pandas, Numpy, Scipy}
-\sectionsep
+\begin{tabular}{rl}
+\textsc{Place and Date of Birth:} & Canada  | 20 November 1987 \\
+\textsc{Address:} & 123 Broadway, City, State, Canada \\
+\textsc{Phone:} & +1 111 1112\\
+\textsc{email:} & \href{mailto:john@smith.com}{john@smith.com}
+\end{tabular}
 
-\datecolor{20XX-now} \runsubsection{Indian Institute of Science, Banglore}
-\descript{Research Intern}
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{2pt}}
-pan sharpening is one kind of data fusion become very wide spread method which populate the spectral band information with the influence of high spatial information.
-\end{minipage}
-\descriptright{Satellite images(Chandrayan), Fusion Algorithm, Java}
-\sectionsep
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE 
+%----------------------------------------------------------------------------------------
 
-\datecolor{20XX-now} \runsubsection{Smokey, Banglore}
-\descript{Android Intern}
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{2pt}}
-Worked on location based services application which provide services at any location near
-services provider and also made friend module.
-\end{minipage}
-\descriptright{Android, Mysql, Google map}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Achievements/Awards} 
-\noindent\rule{12.5cm}{0.4pt}
-\datecolor{20XX-now} \runsubsection{Rajsthan Hackathon}
-\descript{Participated}
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{2pt}}
-In this hackathon Developed distributed Voting Application.
-\end{minipage}
-\datecolor{20XX-now} \runsubsection{Angelhack, Jaipur}
-\descript{Finalist}
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{2pt}}
-In this hackathon Developed a Dapp using Blockchain which is based on smart contract.
-\end{minipage}
-\datecolor{20XX-now} \runsubsection{Digital India}
-\descript{Grand Prize Winner}
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{2pt}}
-In this hackathon developed a web-app in which showing kashmir as paradise on earth.
-\end{minipage}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SIDE PROJECT
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Side Project}
-\noindent\rule{12.5cm}{0.4pt}
-\datecolor{20XX-now} \runsubsection{Digital Certificate Dapp using Ethereum}
-\descript{Blockchain, Web3JS}
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{5pt}}
-A Dapp issue certificate and verify. An Idea to use Blockchain to create Digital Certificate.
-\end{minipage}
-\datecolor{20XX-now} \runsubsection{Identifying Gender From Images of Faces}
-\descript{ML}
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{5pt}}
-Identifying gender of a person by looking at his/her Photograph.
-\end{minipage}
-\datecolor{20XX-now} \runsubsection{Small Project}
-\descript{Android, Data Analysis, Image Processing}
-\noindent
-\hspace{5em}%
-\begin{minipage}{0.85\textwidth\vspace{5pt}}
-Result Portal, Voice Calci, Cubic Bispline, Image Compression, smoothing, Fitting Curve.
-\end{minipage}
-\end{minipage} 
-\end{document}  \documentclass[]{article}
+\section{Work Experience}
+
+\begin{tabular}{r|p{11cm}}
+\emph{Current} & 1\textsuperscript{st} year Analyst at \textsc{Lehman Brothers}, London \\
+\textsc{Mar 2012} & \emph{Commodities Structured Trading}\\ 
+& \footnotesize{Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (\textit{ags, oils, precious} and \textit{base metals}), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping.}\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{Jul 2010-Oct 2011} & Summer Intern at \textsc{Intech Inc}, Chicago \emph{}\\
+& \footnotesize{Received pre-placed offer from the Exotics Trading Desk as a result of very positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.}\\
+\multicolumn{2}{c}{} \\
+
+%------------------------------------------------
+
+\textsc{Jan-Mar 2011} & Computer Technician at \textsc{Buy More}, Burbank \emph{}\\
+& \footnotesize{Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again.}
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabular}{rl}	
+\textsc{July} 2012 & Master of Commerce in \textsc{Finance}, \textbf{The University of California}, Berkeley\\
+& 110/110 \small\emph{First Class Honours} | Major: Quantitative Finance\\
+& Thesis: ``Money is the Root of All Evil - Or is it?'' | \small Advisor: Prof. James \textsc{Smith}\\
+&\normalsize \textsc{Gpa}: 8.0/9.0\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams}\\
+&\\
+
+%------------------------------------------------
+
+\textsc{July} 2011& Undergraduate Degree in \textsc{}\textsc{Business Studies} \\&110/110 \small\emph{Commerce Specialization}, \normalsize\textbf{The University of California}, Berkeley\\
+& Heavily specialized in mundane paperwork | \small Advisor: Stefano \textsc{Bonini}\\
+&\normalsize \textsc{Gpa}: 7.5/9.0 \hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}\\
+&\\
+
+%------------------------------------------------
+
+\textsc{Fall} 2008 & Exchange Semester at \textbf{University of Southern California}, Los Angeles\\
+& \textsc{Gpa}: 8.0/9.0 \hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}\\
+&\\
+
+%------------------------------------------------
+
+\textsc{July} 2006& \textbf{Liceo Classico ``E. Duni''}, Matera | Final Grade: 100/100
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	SCHOLARSHIPS AND ADDITIONAL INFO
+%----------------------------------------------------------------------------------------
+
+\section{Scholarships and Certificates}
+
+\begin{tabular}{rl}
+\textsc{Sept.} 2012 & Faculty of Science Masters Scholarship \footnotesize(\$30,000)\normalsize\\
+
+\textsc{June} 2010 & {\textsc{Gmat}\textregistered}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}: 730 (\textsc{q:50;v:39}) 96\textsuperscript{th} percentile; \textsc{awa}: 6.0/6.0 (89\textsuperscript{th} percentile)
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+
+\section{Languages}
+
+\begin{tabular}{rl}
+\textsc{English:} & Fluent\\
+
+\textsc{Italian:} & Mothertongue\\
+
+\textsc{French:} & Basic Knowledge\\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS 
+%----------------------------------------------------------------------------------------
+
+\section{Computer Skills}
+
+\begin{tabular}{rl}
+Basic Knowledge: & \textsc{php}, my\textsc{sql}, \textsc{html}, Access, \textsc{Linux}, ubuntu, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}\\
+
+Intermediate Knowledge: & \textsc{vba}, Excel, Word, PowerPoint\\
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS AND ACTIVITIES
+%----------------------------------------------------------------------------------------
+
+\section{Interests and Activities}
+
+Technology, Open-Source, Programming\\
+Paradoxes in Decision Making, Psychoanalysis, Behavioural Finance\\
+Football, Travelling
+
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	GRADE TABLES
+%----------------------------------------------------------------------------------------
+
+\par{\centering\Large \hypertarget{grds}{Master of Science in \textsc{Finance}}\par}\large{\centering Grades\par}\normalsize
+
+\begin{center}
+\begin{tabular}{lcc}
+\multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade}&\textsc{Credit Hrs}\\ \hline
+Corporate Finance (Valuation) & 25 & 6\\
+Financial Statement Analysis & 28 & 6\\
+Statistics & 27 & 6\\
+Theory of Finance & 26 & 6\\
+Quantitative Methods for Finance & 30 & 6\\
+Econometrics & 24 & 6\\
+Derivatives & 31 & 6\\
+Management of Financial and Insurance Companies & 30 & 6\\
+Business Law & 31 & 6\\
+Investment Banking	& 28 & 6\\ \\		
+Behavioral Models for Economics and Finance	 & 29 & 6\\
+Numerical Methods for Finance & 29 & 6\\
+Advanced Derivatives & 30 & 6\\
+Fixed Income (Advanced Methods) & 30 & 6\\ \\
+English Language & 30 &	4\\
+French Language & 31 &	4\\	
+Internship & & 8\\		
+Final Thesis & & 20\\	
+& Total & 120\\\cline{2-3}
+&\textsc{Gpa}&\textbf{8.0}
+\end{tabular}
+\end{center}
+\bigskip
+\hrule
+\bigskip
+
+%------------------------------------------------
+
+\bigskip
+
+\par{\centering\Large \hypertarget{grds_usc}{Exchange Program at \textsc{usc}, Los Angeles}\par}\large{\centering Grades\par}\normalsize
+
+\begin{center}
+\begin{tabular}{lcc}
+\multicolumn{1}{c}{\textsc{Exam}} & \textsc{Grade} & \textsc{Grade Points}\\ 
+\hline
+Corporate Financial Strategy & A & 4\\
+Derivatives & A & 4\\
+Money, Credit, and Banking & A & 4\\
+Business Strategy & A- & 3.5\\
+& &\\\cline{2-3}
+& \textsc{Gpa} & \textbf{3.875}
+\end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
