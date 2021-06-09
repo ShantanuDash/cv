@@ -20,16 +20,16 @@ jobs:
         with:
           root_file: main.tex
           #latexmk_use_xelatex: true
-      - name: Publish PDF
-        uses: appleboy/scp-action@v0.1.1
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
-          source: "main.pdf"
-          target: "~/"
-          use_insecure_cipher: true    
+      #- name: Publish PDF
+       # uses: appleboy/scp-action@v0.1.1
+        #with:
+         # host: ${{ secrets.SSH_HOST }}
+          #username: ${{ secrets.SSH_USERNAME }}
+          #key: ${{ secrets.SSH_KEY }}
+          #passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
+          #source: "main.pdf"
+          #target: "~/"
+          #use_insecure_cipher: true    
       - name: upload
         uses: actions/upload-artifact@v2
         with:
