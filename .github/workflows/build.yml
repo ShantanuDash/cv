@@ -30,14 +30,7 @@ jobs:
           #source: "main.pdf"
           #target: "~/"
           #use_insecure_cipher: true
-          
-      - run: sudo cp main.pdf /outme
-      - name: upload
-        uses: actions/upload-artifact@v2
-        with:
-          name: PDF
-          path: /outme/main.pdf
-          
+      - run: sudo cp main.pdf /outme   
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
@@ -48,6 +41,14 @@ jobs:
           destination-repository-name: 'cv'
           user-email: me@shantanu.rocks
           target-branch: gh-pages
+
+      
+      - name: upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: outme/main.pdf
+          
 
       #- name: Push to gh-pages
         #uses: softprops/action-gh-release@v1
