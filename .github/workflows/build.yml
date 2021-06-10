@@ -29,12 +29,26 @@ jobs:
           #passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
           #source: "main.pdf"
           #target: "~/"
-          #use_insecure_cipher: true    
+          #use_insecure_cipher: true
+          
+      - run: mv main.pdf /out
       - name: upload
         uses: actions/upload-artifact@v2
         with:
           name: PDF
-          path: main.pdf
+          path: /out/main.pdf
+          
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'out'
+          destination-github-username: 'ShantanuDash'
+          destination-repository-name: 'cv'
+          user-email: me@shantanu.rocks
+          target-branch: gh-pages
+
       #- name: Push to gh-pages
         #uses: softprops/action-gh-release@v1
         #if: startsWith(github.ref, 'refs/tags/')
