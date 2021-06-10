@@ -30,7 +30,8 @@ jobs:
           #source: "main.pdf"
           #target: "~/"
           #use_insecure_cipher: true
-      - run: sudo cp main.pdf /outme   
+      - run: sudo mkdir outme
+      - run: sudo cp main.pdf outme   
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
