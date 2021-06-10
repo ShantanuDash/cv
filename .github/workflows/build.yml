@@ -1,8 +1,8 @@
 name: compile-pdf
 
 on:
-  page_build:
-  pull_request:
+  #page_build:
+  #pull_request:
   push:
     branches:
       - main
