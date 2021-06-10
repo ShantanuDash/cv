@@ -31,7 +31,7 @@ jobs:
           #target: "~/"
           #use_insecure_cipher: true
           
-      - run: cp main.pdf /outme
+      - run: sudo cp main.pdf /outme
       - name: upload
         uses: actions/upload-artifact@v2
         with:
