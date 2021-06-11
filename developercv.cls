@@ -180,7 +180,7 @@
 
 % Command to output section title headings
 \newcommand{\noir}[1]{% The only parameter is the section text
-	\colorbox{black}{\textcolor{white}{\textbf{#1}}}\\% Section title
+	\colorbox{black}{\textcolor{white}{\textbf{#1}}}% Section title
 }
 
 
