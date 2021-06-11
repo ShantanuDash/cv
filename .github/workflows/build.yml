@@ -35,7 +35,7 @@ jobs:
       #- name: convert pdf to png
       - run: sudo apt install poppler-utils
       - run: sudo mkdir outpng
-      - run: pdftoppm -png main.pdf main
+      - run: pdftoppm main.pdf main -png -rx 300 -ry 300
       - run: sudo cp main.png outpng
         
       
