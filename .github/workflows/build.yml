@@ -54,7 +54,7 @@ jobs:
           destination-github-username: 'ShantanuDash'
           destination-repository-name: 'ShantanuDash'
           user-email: me@shantanu.rocks
-          target-branch: main
+          target-branch: cv
           
       - name: upload pdf
         uses: actions/upload-artifact@v2
