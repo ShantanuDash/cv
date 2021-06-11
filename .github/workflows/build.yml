@@ -42,14 +42,33 @@ jobs:
           destination-repository-name: 'cv'
           user-email: me@shantanu.rocks
           target-branch: gh-pages
-
+      #- name: convert pdf to png
+      - run: sudo mkdir outpng
+      - run: convert main.pdf main.png
+      - run: sudo cp main.png outpng
+        
       
-      - name: upload
+      - name: Push png to ShantanuDash
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'outpng'
+          destination-github-username: 'ShantanuDash'
+          destination-repository-name: 'ShantanuDash'
+          user-email: me@shantanu.rocks
+          target-branch: main
+          
+      - name: upload pdf
         uses: actions/upload-artifact@v2
         with:
           name: PDF
           path: outme/main.pdf
-          
+      - name: upload img
+        uses: actions/upload-artifact@v2
+        with:
+          name: IMG
+          path: outpng/main.png    
 
       #- name: Push to gh-pages
         #uses: softprops/action-gh-release@v1
